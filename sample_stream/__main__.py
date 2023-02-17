@@ -139,8 +139,8 @@ def main():
                 if duration and (now - start) > duration:
                     return
                 sleep(delay)
-    except:
-        pass
+    except Exception as e:
+        print(f"Error: {e}")
 
 
 if __name__ == "__main__":
