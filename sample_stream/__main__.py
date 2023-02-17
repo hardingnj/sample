@@ -131,10 +131,7 @@ def main():
 
     start = time()
     try:
-        while True:
-            line = args.file.readline()
-            if not line:
-                return
+        for line in args.file:
             if random() <= rate:
                 stdout.write(line)
                 stdout.flush()
